@@ -32,7 +32,7 @@ const ServerChannel = ({ server, channel, role }: ServerChannelProps) => {
 
     const onAction = (e: React.MouseEvent, action: ModalType) => {
         e.stopPropagation();
-        onOpen(action, { server, channel });
+        onOpen(action, { serverWithoutMember: server, channel });
     }
 
     return (
